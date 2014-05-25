@@ -10,6 +10,19 @@
 - Google-perftools
 
 ### 使い方
+#### ディレクトリ構造
+- .
+  - CMakeList.txt
+  - unit_tests.cmake: ユニットテストの設定ファイル
+  - bin: 実行可能ファイル出力先
+  - include: ヘッダディレクトリ
+    - my: サブディレクトリ
+  - src: ソースディレクトリ
+    - main.cc: main関数を含むソース
+    - my: サブディレクトリ
+  - tests: ユニットテストディレクトリ
+
+#### 基本
 デバッグビルドの場合は以下のコマンドを実行してください。
 > cmake -DCMAKE_BUILD_TYPE=DEBUG .
 
