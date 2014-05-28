@@ -32,7 +32,8 @@ TARGET_LINK_LIBRARIES(${CMAKE_PROJECT_NAME} ${libraries})
 # Profiling configuration
 IF(CMAKE_BUILD_TYPE STREQUAL "PROFILE")
   # Link libraries of Google-perftools
-  TARGET_LINK_LIBRARIES(${CMAKE_PROJECT_NAME} /usr/lib/libprofiler.so.0)
+  # TARGET_LINK_LIBRARIES(${CMAKE_PROJECT_NAME} /usr/lib/libprofiler.so.0)
+  TARGET_LINK_LIBRARIES(${CMAKE_PROJECT_NAME} )
 ENDIF(CMAKE_BUILD_TYPE STREQUAL "PROFILE")
 
 
@@ -40,7 +41,8 @@ ENDIF(CMAKE_BUILD_TYPE STREQUAL "PROFILE")
 IF(CMAKE_BUILD_TYPE STREQUAL "DEBUG")
   INCLUDE_DIRECTORIES(tests)
   # Link libraries of boost.test
-  SET(test_libraries ${libraries} boost_unit_test_framework)
+  # SET(test_libraries ${libraries} boost_unit_test_framework)
+  SET(test_libraries ${libraries} )
 
   # add_unit_test(target, test_sources...)
   #
@@ -49,7 +51,7 @@ IF(CMAKE_BUILD_TYPE STREQUAL "DEBUG")
   # target: unit test name
   # test_sources: sources
   #
-  MACRO (add_unit_test args)
+  MACRO(add_unit_test args)
     SET(target ${ARGV0})
 
     ADD_EXECUTABLE(${ARGV})
