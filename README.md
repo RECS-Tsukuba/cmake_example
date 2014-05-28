@@ -7,8 +7,6 @@
 ### サンプルの必要環境
 - CMake
 - clang++
-- boost.Test
-- Google-perftools
 
 
 ### 使い方
