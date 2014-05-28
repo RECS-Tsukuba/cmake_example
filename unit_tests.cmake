@@ -3,3 +3,8 @@ add_unit_test(
   tests/my_test.cc
   src/my/source.cc
 )
+add_unit_test(
+  failure_test
+  tests/failure_test.cc
+  src/my/source.cc
+)
